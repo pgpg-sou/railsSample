@@ -1,0 +1,27 @@
+<h1> RunSuke ver3.0 </h1>
+
+<div class="container">
+    <table class = "table table-striped table-bordered table-hover table-condensed">
+	   	<thead>
+    	   	<tr><th>Name</th><th>Menu</th></tr>
+      	</thead>
+		<tbody>
+		  <% @profiles.each do |profile| %>
+			  <tr><td><%= profile.name %></td><td><%= profile.menu %></td></tr>
+		  <% end %>  
+		</tbody>
+     </table>
+ </div>
+
+<div class = "container" >
+	<table class = "table table-striped table-bordered table-hover table-condensed">
+		<thead>
+			<tr><th>Event</th><th>Date</th></tr>
+		</thead>
+		<tbody>
+		<% @events.each do |event| %>
+			<tr><td><%= event.event %></td><td><%= event.date %></td></tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
